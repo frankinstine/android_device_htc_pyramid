@@ -27,10 +27,6 @@ PRODUCT_PACKAGES += \
     gps.pyramid \
     lights.pyramid
 
-# Wifi Calling
-#PRODUCT_PACKAGES += \
-#    GanOptimizer
-
 ## The gps config appropriate for this device
 PRODUCT_COPY_FILES += device/common/gps/gps.conf_EU:system/etc/gps.conf
 
@@ -77,7 +73,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += device/htc/pyramid/configs/AudioBTID.csv:system/etc/AudioBTID.csv
 
 # QC thermald config
-PRODUCT_COPY_FILES += device/htc/pyramid/configs/thermald.conf:system/etc/thermald.conf
+
 
 # Sound configs
 PRODUCT_COPY_FILES += \
@@ -121,15 +117,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.locationfeatures=1 \
     dalvik.vm.dexopt-flags=m=y
 
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/htc/pyramid/prebuilt/kernel
-else
-LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
+#ifeq ($(TARGET_PREBUILT_KERNEL),)
+#LOCAL_KERNEL := device/htc/pyramid/prebuilt/kernel
+#else
+#LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+#endif
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel \
-    device/htc/pyramid/modules/bcmdhd.ko:/system/lib/modules/bcmdhd.ko
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_KERNEL):kernel \
+#    device/htc/pyramid/modules/bcmdhd.ko:/system/lib/modules/bcmdhd.ko
 
 # call the proprietary setup
 $(call inherit-product-if-exists, vendor/htc/pyramid/pyramid-vendor.mk)
