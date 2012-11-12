@@ -12,8 +12,6 @@ ro.telephony.ril.v3=datacallapn,signalstrength
 # graphics
 com.qc.hardware=true
 debug.composition.type=gpu
-#debug.mdpcomp.maxlayer=2
-#debug.mdpcomp.logs=0
 debug.enabletr=true
 #debug.sf.hw=1
 debug.egl.hw=1
@@ -27,3 +25,14 @@ wifi.interface=wlan0
 
 # UMS
 persist.sys.usb.config=mass_storage,adb
+
+# Power Save
+ro.ril.disable.power.collapse=0
+pm.sleep_mode=1
+
+#Device Info
+ro.device.cpu=Qualcomm MSM8660 Dual-Core 1.5GHz
+ro.device.gpu=Qualcomm Adreno 220
+ro.device.front_cam=VGA
+ro.device.rear_cam=8MP w/1080p HD Video Recording
+ro.device.screen_res=4.3in qHD 540x960
