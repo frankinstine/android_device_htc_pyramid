@@ -25,6 +25,7 @@ wifi.interface=wlan0
 
 # UMS
 persist.sys.usb.config=mass_storage,adb
+ro.vold.umsdirtyratio=50
 
 # Power Save
 ro.ril.disable.power.collapse=0
